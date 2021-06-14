@@ -1,0 +1,4 @@
+# To make number in reverse, we can use 'reversed()' function
+
+for i in reversed(range(5)):
+  print(i)
