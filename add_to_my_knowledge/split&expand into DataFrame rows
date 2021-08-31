@@ -1,0 +1,15 @@
+In [33]: (df.set_index('title')
+            ['genres'].str.split(',\s*', expand=True)
+            .stack()
+            .reset_index(name='genre')
+            .drop('level_1',1))
+Out[33]:
+        title      genre
+0  Robin Hood     Action
+1  Robin Hood  Adventure
+2  Madagaskar     Family
+3  Madagaskar  Animation
+4  Madagaskar     Comedy
+
+
+https://stackoverflow.com/questions/47571618/how-to-split-expand-a-string-value-into-several-pandas-dataframe-rows
