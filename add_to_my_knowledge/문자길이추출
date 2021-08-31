@@ -1,0 +1,14 @@
+total_report_data['len'] = ''
+
+for i in tqdm_notebook(range(len(total_report_data))):
+    total_report_data['len'][i] = len(total_report_data['고유식별자\n(UDI-DI)코드'].loc[i])
+    
+    
+    28분.....
+    노노
+    
+    
+    
+    total_report_data['고유식별자\n(UDI-DI)코드'].str.len()
+    
+    끝
