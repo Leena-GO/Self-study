@@ -1,0 +1,7 @@
+for i in tqdm_notebook(range(len(gs1))):
+#     gs1['UDI_DI'][i] = gs1['UDI_DI'][i].rjust(14, '0')
+    gs1.at[i, 'DI'] = gs1['UDI_DI'][i].rjust(14, '0')
+    
+    
+    #에 있는 거 하려니까 시간 진짜 오래걸리는데 ! 
+    아래 코드로 돌리니 7초컷 했당 ... 신기신기
