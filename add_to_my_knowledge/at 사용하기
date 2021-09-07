@@ -5,3 +5,13 @@ for i in tqdm_notebook(range(len(gs1))):
     
     #에 있는 거 하려니까 시간 진짜 오래걸리는데 ! 
     아래 코드로 돌리니 7초컷 했당 ... 신기신기
+
+
+
+#괄호 안에 있는 내용 추출하기
+outer = re.compile("\((.+)\)")
+emed['등급'] = ''
+
+for i in tqdm_notebook(range(len(emed))):
+    m = outer.search(emed['분류번호'][i])
+    emed.at[i, '등급'] = m.group(1)
