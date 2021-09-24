@@ -1,0 +1,1 @@
+dont_know['과거 품목허가번호 존재여부'] = dont_know.품목허가번호_공백제거.apply(lambda x : '존재' if x in list_old_data else '비존재')
