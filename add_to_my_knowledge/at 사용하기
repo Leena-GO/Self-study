@@ -15,3 +15,11 @@ emed['등급'] = ''
 for i in tqdm_notebook(range(len(emed))):
     m = outer.search(emed['분류번호'][i])
     emed.at[i, '등급'] = m.group(1)
+
+
+if 사용하지 않고 내가 원하는 값을 채워넣는 방법!
+
+ccds_with_clip_data.at[(ccds_with_clip_data['출고단가'] >= 100000), '등급'] = 'A'
+ccds_with_clip_data.at[(ccds_with_clip_data['출고단가'] < 100000) & ((ccds_with_clip_data['출고단가'] >= 10000) & (ccds_with_clip_data['출고량금액'] >= 1000000)), '등급'] = 'B'
+ccds_with_clip_data.at[(ccds_with_clip_data['품목명'].notnull()) & (ccds_with_clip_data['등급'] == ''), '등급'] = 'B'
+ccds_with_clip_data.at[(ccds_with_clip_data['등급'] == ''), '등급'] = 'C'
